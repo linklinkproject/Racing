@@ -11,6 +11,9 @@ public enum DriveType
 
 public class WheelDrive : MonoBehaviour
 {
+    [Tooltip("컨트롤 할 조이스틱")]
+    public Joystick joystick; //조이스틱 컨트롤러
+
     [Tooltip("Maximum steering angle of the wheels")]
 	public float maxAngle = 30f;
 	[Tooltip("Maximum torque applied to the driving wheels")]
@@ -57,10 +60,12 @@ public class WheelDrive : MonoBehaviour
 	{
 		m_Wheels[0].ConfigureVehicleSubsteps(criticalSpeed, stepsBelow, stepsAbove);
 
-		float angle = maxAngle * Input.GetAxis("Horizontal");
-		float torque = maxTorque * Input.GetAxis("Vertical");
+        float angle = maxAngle * joystick.Horizontal;//Input.GetAxis("Horizontal");
 
-		float handBrake = Input.GetKey(KeyCode.X) ? brakeTorque : 0;
+        float torque = maxTorque * joystick.Vertical;//Input.GetAxis("Vertical");
+
+
+        float handBrake = Input.GetKey(KeyCode.X) ? brakeTorque : 0;
 
 		foreach (WheelCollider wheel in m_Wheels)
 		{
