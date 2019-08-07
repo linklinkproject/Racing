@@ -69,22 +69,22 @@ public class WheelDrive : MonoBehaviour
 		foreach (WheelCollider wheel in m_Wheels)
 		{
 			// A simple car where front wheels steer while rear ones drive.
-			if (wheel.transform.localPosition.z > 0)
+			if (wheel.transform.localPosition.z < 0)
 				wheel.steerAngle = angle;
 
-			if (wheel.transform.localPosition.z < 0)
+			if (wheel.transform.localPosition.z > 0)
 			{
 				wheel.brakeTorque = handBrake;
 			}
 
-			if (wheel.transform.localPosition.z < 0 && driveType != DriveType.FrontWheelDrive)
+			if (wheel.transform.localPosition.z > 0 && driveType != DriveType.FrontWheelDrive)
 			{
-				wheel.motorTorque = torque;
+				wheel.motorTorque = -torque;
 			}
 
-			if (wheel.transform.localPosition.z >= 0 && driveType != DriveType.RearWheelDrive)
+			if (wheel.transform.localPosition.z <= 0 && driveType != DriveType.RearWheelDrive)
 			{
-				wheel.motorTorque = torque;
+				wheel.motorTorque = -torque;
 			}
 
 			// Update visual wheels if any.
