@@ -39,11 +39,10 @@ public class WheelDrive : MonoBehaviour
 	void Start()
 	{
 		m_Wheels = GetComponentsInChildren<WheelCollider>();
-
 		for (int i = 0; i < m_Wheels.Length; ++i) 
 		{
 			var wheel = m_Wheels [i];
-
+                        
 			// Create wheel shapes only when needed.
 			if (wheelShape != null)
 			{
