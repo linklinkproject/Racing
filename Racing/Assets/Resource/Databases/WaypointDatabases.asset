@@ -11,4 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32e5a44740c45fa41adf7bad6bd39890, type: 3}
   m_Name: WaypointDatabases
   m_EditorClassIdentifier: 
-  waypointInfos: []
+  waypointInfos:
+  - {fileID: 0}
