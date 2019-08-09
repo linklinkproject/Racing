@@ -14,23 +14,33 @@ public class StoreMenu : MonoBehaviour {
     private ItemData[] itemDatas; // 각각 저장해둔 아이템에 대한 정보들 (배열로 저장해서 불러오기)
     [SerializeField]
     private Text itemDescText; // 각 아이템에 대한 설명 텍스트
-
-
-	// Use this for initialization
-	void Start () {
+    
+    // Use this for initialization
+    void Start () {
         itemCar.SetActive(false);
         itemDescArea.SetActive(false);
-	}
+     
+        
+    }
 	
 	// Update is called once per frame
 	void Update () {
         itemCar.transform.Rotate(Vector3.up, 100f * Time.deltaTime);
+        
     }
 
     public void ButtonOnClick ()
     {
         itemCar.SetActive(true);
         itemDescArea.SetActive(true);
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            Debug.Log(hit.transform.name);
+        }
+
         // AddItme(); >> 누른 버튼안의 정보를 담아야하는데 hitInfo로 넣을지 눌렀을 때 전송시킬지 고민중.
         itemCar.transform.Rotate(Vector3.up, 100f * Time.deltaTime);
     }
@@ -42,5 +52,6 @@ public class StoreMenu : MonoBehaviour {
         // Test용 임시 데이터
        
     }
+   
 
 }
