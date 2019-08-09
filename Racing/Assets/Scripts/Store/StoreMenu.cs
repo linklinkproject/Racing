@@ -63,16 +63,18 @@ public class StoreMenu : MonoBehaviour {
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
-            Debug.Log(hit.transform.name);
+            Debug.Log(hit.transform.name); // 이건 잘됨. 여러군데서 시도해봤는데 위에 네 줄 다같이 있으면 무조건 되는 듯.
         }
 
-        if (hit.transform.name.Equals("TestCar1")) // ray로 객체 이름 받아와서 이름 비교 해주는거 >> 이름 같으면 그 객체안의 item에서 data 받아와서 출력.
+        if (hit.transform.name.Equals("TestCar1")) // 일단 아무 테스트객체 찾아볼라 그랬는데 아예 안돌아감.. 하... 계속 만져도 안돌아감 !!!!! 아악!!!!!!
+            // ray로 객체 이름 받아와서 이름 비교 해주는거 >> 이름 같으면 그 객체안의 item에서 data 받아와서 출력.
         {
-            itemData = _itemData;
-            itemDescText.text = itemData.itemDesc;
+            itemData = _itemData; // 받아온 객체의 아이템정보로 바꿔줘서 출력해주기
+            itemDescText.text = itemData.itemDesc; // null 떠버림
 
-            GameObject.Find("TestCars").transform.Find(hit.transform.name).gameObject.SetActive(true);
-
+            GameObject.Find("TestCars").transform.Find(hit.transform.name).gameObject.SetActive(true); //객체 이름 같은거 찾아서 띄워주기 
+            GameObject.Find("TestCars").transform.Find(hit.transform.name).gameObject.transform.Rotate(Vector3.up, 100f * Time.deltaTime); // 빙글빙글
+            
             //itemCar.SetActive(true);
             itemDescArea.SetActive(true);
 
