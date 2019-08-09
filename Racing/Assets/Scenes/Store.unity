@@ -249,6 +249,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 100, y: 100, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &80112074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 80112075}
+  m_Layer: 0
+  m_Name: TestCars
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &80112075
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 80112074}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1767704541}
+  - {fileID: 912708687}
+  - {fileID: 452526192}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &98653253
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,7 +1098,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 80112075}
     m_Modifications:
     - target: {fileID: 400000, guid: aeccb9afd2c5d0a49806a3a543b169d2, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1083,7 +1114,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: aeccb9afd2c5d0a49806a3a543b169d2, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: aeccb9afd2c5d0a49806a3a543b169d2, type: 2}
       propertyPath: m_LocalRotation.y
@@ -1091,7 +1122,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: aeccb9afd2c5d0a49806a3a543b169d2, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: aeccb9afd2c5d0a49806a3a543b169d2, type: 2}
       propertyPath: m_LocalRotation.w
@@ -1099,11 +1130,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: aeccb9afd2c5d0a49806a3a543b169d2, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: aeccb9afd2c5d0a49806a3a543b169d2, type: 2}
       propertyPath: m_Name
-      value: Test3
+      value: TestCar3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: aeccb9afd2c5d0a49806a3a543b169d2, type: 2}
       propertyPath: m_LocalScale.x
@@ -1120,6 +1151,14 @@ Prefab:
     - target: {fileID: 400000, guid: aeccb9afd2c5d0a49806a3a543b169d2, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 15.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: aeccb9afd2c5d0a49806a3a543b169d2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: aeccb9afd2c5d0a49806a3a543b169d2, type: 2}
+      propertyPath: m_TagString
+      value: Car
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aeccb9afd2c5d0a49806a3a543b169d2, type: 2}
@@ -1141,6 +1180,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 11400000, guid: 14625b14b0db9ea478e3f085f4af6ca3, type: 2}
+--- !u!4 &452526192 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: aeccb9afd2c5d0a49806a3a543b169d2,
+    type: 2}
+  m_PrefabInternal: {fileID: 452526189}
 --- !u!1 &459030111
 GameObject:
   m_ObjectHideFlags: 0
@@ -1154,7 +1198,7 @@ GameObject:
   - component: {fileID: 459030113}
   - component: {fileID: 459030116}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: TestCar3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1655,7 +1699,7 @@ GameObject:
   - component: {fileID: 694495928}
   - component: {fileID: 694495931}
   m_Layer: 5
-  m_Name: Button
+  m_Name: TestCar1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2130,7 +2174,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 80112075}
     m_Modifications:
     - target: {fileID: 400000, guid: 81de690e0bb3130439ed3ffedbd27be2, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2146,7 +2190,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 81de690e0bb3130439ed3ffedbd27be2, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 81de690e0bb3130439ed3ffedbd27be2, type: 2}
       propertyPath: m_LocalRotation.y
@@ -2154,7 +2198,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 81de690e0bb3130439ed3ffedbd27be2, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 81de690e0bb3130439ed3ffedbd27be2, type: 2}
       propertyPath: m_LocalRotation.w
@@ -2162,11 +2206,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 81de690e0bb3130439ed3ffedbd27be2, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 81de690e0bb3130439ed3ffedbd27be2, type: 2}
       propertyPath: m_Name
-      value: Test2
+      value: TestCar2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 81de690e0bb3130439ed3ffedbd27be2, type: 2}
       propertyPath: m_LocalScale.x
@@ -2183,6 +2227,14 @@ Prefab:
     - target: {fileID: 400000, guid: 81de690e0bb3130439ed3ffedbd27be2, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 15.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 81de690e0bb3130439ed3ffedbd27be2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 81de690e0bb3130439ed3ffedbd27be2, type: 2}
+      propertyPath: m_TagString
+      value: Car
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81de690e0bb3130439ed3ffedbd27be2, type: 2}
@@ -2204,6 +2256,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 11400000, guid: 71e6d46ad8ccc9d4fa5ccc2836e37500, type: 2}
+--- !u!4 &912708687 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 81de690e0bb3130439ed3ffedbd27be2,
+    type: 2}
+  m_PrefabInternal: {fileID: 912708684}
 --- !u!1 &925784929
 GameObject:
   m_ObjectHideFlags: 0
@@ -3602,7 +3659,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemCar: {fileID: 1767704537}
   itemDescArea: {fileID: 2003887799}
-  itemDatas: []
   itemDescText: {fileID: 1514977391}
 --- !u!1 &1514977389
 GameObject:
@@ -3750,7 +3806,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 80112075}
     m_Modifications:
     - target: {fileID: 400000, guid: 76c07dd6050c1274e957542c913d7907, type: 2}
       propertyPath: m_LocalPosition.x
@@ -3766,7 +3822,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 76c07dd6050c1274e957542c913d7907, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 76c07dd6050c1274e957542c913d7907, type: 2}
       propertyPath: m_LocalRotation.y
@@ -3774,7 +3830,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 76c07dd6050c1274e957542c913d7907, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 76c07dd6050c1274e957542c913d7907, type: 2}
       propertyPath: m_LocalRotation.w
@@ -3782,7 +3838,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 76c07dd6050c1274e957542c913d7907, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 76c07dd6050c1274e957542c913d7907, type: 2}
       propertyPath: m_LocalScale.x
@@ -3802,11 +3858,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 76c07dd6050c1274e957542c913d7907, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 76c07dd6050c1274e957542c913d7907, type: 2}
       propertyPath: m_Name
-      value: Test1
+      value: TestCar1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 76c07dd6050c1274e957542c913d7907, type: 2}
+      propertyPath: m_TagString
+      value: Car
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76c07dd6050c1274e957542c913d7907, type: 2}
@@ -3828,6 +3888,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 11400000, guid: 53627c26d3dab094baaee63aed00adc0, type: 2}
+--- !u!4 &1767704541 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 76c07dd6050c1274e957542c913d7907,
+    type: 2}
+  m_PrefabInternal: {fileID: 1767704536}
 --- !u!1 &1781724904
 GameObject:
   m_ObjectHideFlags: 0
@@ -3841,7 +3906,7 @@ GameObject:
   - component: {fileID: 1781724906}
   - component: {fileID: 1781724909}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: TestCar2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
