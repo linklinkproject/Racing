@@ -9,6 +9,11 @@ public enum DriveType
 	AllWheelDrive
 }
 
+
+
+/// <summary>
+/// https://micropilot.tistory.com/2659 참고해보자
+/// </summary>
 public class WheelDrive : MonoBehaviour
 {
     [Tooltip("컨트롤 할 조이스틱")]
@@ -38,7 +43,11 @@ public class WheelDrive : MonoBehaviour
     // Find all the WheelColliders down in the hierarchy.
 	void Start()
 	{
-		m_Wheels = GetComponentsInChildren<WheelCollider>();
+        GetComponent<Rigidbody>().centerOfMass = new Vector3(0, -0.9f, 0.5f); // 무게중심 낮추기
+
+        //차에 부착된 wheel 저장
+        //휠 생성 해서 차에 부착
+        m_Wheels = GetComponentsInChildren<WheelCollider>();
 		for (int i = 0; i < m_Wheels.Length; ++i) 
 		{
 			var wheel = m_Wheels [i];
@@ -57,6 +66,8 @@ public class WheelDrive : MonoBehaviour
 	// This helps us to figure our which wheels are front ones and which are rear.
 	void Update()
 	{
+
+
 		m_Wheels[0].ConfigureVehicleSubsteps(criticalSpeed, stepsBelow, stepsAbove);
 
         float angle = maxAngle * joystick.Horizontal;//Input.GetAxis("Horizontal");
