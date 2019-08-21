@@ -40,8 +40,15 @@ public class StoreMenu : MonoBehaviour {
 
     public void ButtonOnClick ()
     {
-
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            Debug.Log("button test : " + hit.transform.name); 
+        }
         CarCheck(itemData);
+        // 아래로 수정 .. 근데도 에러남 >> 버튼안에 item데이터 스크립트가 없기 때문.
+        //CarCheck(hit.transform.GetComponent<Item>().itemData);
         
        // itemCar.transform.Rotate(Vector3.up, 100f * Time.deltaTime);
     }
@@ -61,6 +68,10 @@ public class StoreMenu : MonoBehaviour {
             // Debug.Log("TestCar1"); // 띄워짐.
 
             GameObject.Find("TestCars").transform.Find(hit.transform.name).gameObject.SetActive(true); //객체 이름 같은거 찾아서 띄워주기 
+
+            _itemData = hit.transform.GetComponent<Item>().itemData;
+
+            Debug.Log(_itemData.itemName + " " +  _itemData.itemDesc);
 
             itemData = _itemData; // 받아온 객체의 아이템정보로 바꿔줘서 출력해주기
             //itemDescText.text = "바보바보바보야";
