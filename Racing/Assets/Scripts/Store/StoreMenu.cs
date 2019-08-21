@@ -62,8 +62,8 @@ public class StoreMenu : MonoBehaviour {
             Debug.Log(hit.transform.name); // 이건 잘됨. 여러군데서 시도해봤는데 위에 네 줄 다같이 있으면 무조건 되는 듯.
         }
 
+        // ray로 객체 이름 받아와서 이름 비교 해주는거 >> 이름 같으면 그 객체안의 item에서 data 받아와서 출력.
         if (hit.transform.name.Equals("TestCar1")) 
-            // ray로 객체 이름 받아와서 이름 비교 해주는거 >> 이름 같으면 그 객체안의 item에서 data 받아와서 출력.
         {
             // Debug.Log("TestCar1"); // 띄워짐.
 
