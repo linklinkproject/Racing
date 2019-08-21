@@ -44,10 +44,7 @@ public class StoreMenu : MonoBehaviour {
             Debug.Log("button test : " + hit.transform.name); 
         }
         CarCheck(itemData);
-        // 아래로 수정 .. 근데도 에러남 >> 버튼안에 item데이터 스크립트가 없기 때문.
-        //CarCheck(hit.transform.GetComponent<Item>().itemData);
-        
-       // itemCar.transform.Rotate(Vector3.up, 100f * Time.deltaTime);
+       
     }
 
     public void CarCheck(ItemData _itemData)
