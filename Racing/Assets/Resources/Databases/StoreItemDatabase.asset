@@ -11,4 +11,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6bd158cc1617e242a3db3575cec1fd8, type: 3}
   m_Name: StoreItemDatabase
   m_EditorClassIdentifier: 
-  items: []
+  items:
+  - name: TestCar2
+    ID: 0
+    desc: TestCar1
+    image: {fileID: 21300000, guid: 86cba8f300a9ee442aa533f20412f95b, type: 3}
+    prefab: {fileID: 100008, guid: c428101f4ae3e124c905a70d548e6181, type: 2}
+  - name: TestCar2
+    ID: 1
+    desc: TestCar2
+    image: {fileID: 21300000, guid: 6ca93523b0317c242b05932fedb07cb3, type: 3}
+    prefab: {fileID: 100008, guid: 5dce16f7ded4b634fb0ad8550f306b87, type: 2}
+  - name: TestCar3
+    ID: 2
+    desc: TestCar3
+    image: {fileID: 21300000, guid: 48624f05b683e4a4ab1a142e40fd6971, type: 3}
+    prefab: {fileID: 100008, guid: 72960b9b4c20f554b9cffbbe24f21592, type: 2}

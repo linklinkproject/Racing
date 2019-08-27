@@ -36,8 +36,9 @@ public class StoreItemDatabase : ScriptableObject {
     }
 
     //나중에 name 으로 찾아올 메서드 만들면됩니당.
-    public StoreItemInfo GetByName(string name)
+    public GameObject GetByName(string name)
     {
+
         return null;
     }
 }
